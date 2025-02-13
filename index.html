@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gerenciamento de Bar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sistema de Gerenciamento de Bar</h1>
+
+    <!-- Gerenciamento de Produtos -->
+    <section id="product-management">
+      <h2>Gerenciamento de Produtos</h2>
+      <form id="product-form">
+        <input type="text" id="product-name" placeholder="Nome do Produto" required>
+        <input type="number" id="product-price" placeholder="Preço" step="0.01" required>
+        <button type="submit">Adicionar Produto</button>
+      </form>
+      <ul id="product-list"></ul>
+    </section>
+
+    <!-- Gerenciamento de Comandas -->
+    <section id="order-management">
+      <h2>Gerenciamento de Comandas</h2>
+      <form id="order-form">
+        <input type="text" id="customer-name" placeholder="Nome do Cliente" required>
+        <input type="number" id="table-number" placeholder="Número da Mesa" required>
+        <button type="submit">Criar Comanda</button>
+      </form>
+      <div id="order-list"></div>
+    </section>
+
+    <!-- Detalhes da Comanda -->
+    <section id="order-details">
+      <h2>Detalhes da Comanda</h2>
+      <div id="selected-order"></div>
+      <button id="merge-orders-button" onclick="mergeOrders()">Juntar Comandas</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
